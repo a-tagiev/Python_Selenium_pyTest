@@ -7,8 +7,7 @@ try:
     link = "http://suninjuly.github.io/selects1.html"
     browser = webdriver.Chrome()
     browser.get(link)
-    x_element = browser.find_element(By.ID
-                                     , "num1")
+    x_element = browser.find_element(By.ID , "num1")
     y_element = browser.find_element(By.ID, "num2")
     x = x_element.text
     y = y_element.text
