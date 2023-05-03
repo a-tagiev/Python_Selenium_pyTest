@@ -8,13 +8,13 @@ try:
     browser.get(link)
 
     # Заполнение обязательных полей
-    input1 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.first_class input")
-    input1.send_keys("-")
-    input2 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.second_class input")
-    input2.send_keys("-")
-    input3 = browser.find_element(By.CSS_SELECTOR, ".first_block .form-group.third_class input")
-    input3.send_keys("test@test.com")
 
+    first_name = browser.find_element(By.CSS_SELECTOR, ".first_block .first")
+    first_name.send_keys("name")
+    last_name = browser.find_element(By.CSS_SELECTOR, ".first_block .second")
+    last_name.send_keys("last name")
+    email = browser.find_element(By.CSS_SELECTOR, ".third_class .third")
+    email.send_keys("mail@gmail.com")
     # Отправка формы
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
